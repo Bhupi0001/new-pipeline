@@ -1,8 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage {
-            step
+        stage ('Git Checkout') 
+        {
+            steps {
+                git branch: 'main', url: 'https://github.com/Bhupi0001/new-pipeline.git'
+            }
         }
     }
 }
